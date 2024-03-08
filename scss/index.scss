@@ -1,0 +1,84 @@
+@use "globals.scss" as *;
+@use "mixin.scss" as mixinTools;
+
+// Main
+//region
+.contenidoPrincipal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a[href*="novedades"] {
+  text-decoration: underline;
+  color: $color_texto;
+
+    &:hover {
+        @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
+    }
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+  margin: 0 120px 0 120px;
+}
+
+main img {
+  border-radius: 20px;
+  margin: 0 30px;
+}
+
+
+// Slider
+
+.slider-container {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  align-items: center;
+  margin: auto;
+
+  img {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    @include mixinTools.SetTransition(opacity, 1.2s, ease-out);
+  }
+
+  :first-child {
+    opacity: 1;
+  }
+
+  :target {
+    opacity: 1;
+  }
+}
+
+// Slider navigation
+.menu{
+  text-align: center;
+  margin: 20px;
+
+  li {
+    display: inline-block;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: $color_fondo_hover2;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+//endregion
+

@@ -1,0 +1,266 @@
+@use "mixin.scss" as mixinTools;
+@use "globals.scss" as *;
+@import url(index.scss);
+
+@keyframes hoverAnimation {
+  from {
+    background-color: $color_fondo_hover;
+  }
+
+  to {
+    background-color: $color_fondo_hover2;
+  }
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  @include mixinTools.SetFont("Comic Sans MS", 16px, 400, normal, none);
+  @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo);
+}
+
+// Header
+//region
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    @include mixinTools.SetFont("Comic Sans MS", 30px, 400, italic, underline);
+
+    img {
+      max-height: 80px;
+    }
+  }
+
+  .buscador {
+    flex-grow: 1;
+    margin: 0 20px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+    input[type="text"] {
+      @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
+      width: 70%;
+      padding: 8px;
+      border: 1px solid $color_texto;
+      border-radius: 15px;
+    }
+
+    .buscarIcon {
+      cursor: pointer;
+      max-height: 25px;
+      position: relative;
+      top: 8px;
+      margin-left: -40px;
+    }
+  }
+
+  .iconMenu {
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+
+    img {
+      max-height: 30px;
+    }
+
+    &:hover {
+      background-color: $color_fondo_hover;
+    }
+  }
+
+  .submenuNavBar {
+    display: none;
+    position: absolute;
+    @include mixinTools.SetBackgroundAndTextColor($color_texto_hover,$color_fondo_hover);
+    z-index: 1;
+    border-radius: 15px;
+    text-align: center;
+    left: -70%;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+
+        a {
+          color: $color_texto_hover;
+          text-decoration: none;
+          display: block;
+          padding: 20px;
+          border-radius: 15px;
+
+          &:hover{
+            background-color: $color_fondo_hover2;
+            @include mixinTools.SetAnimation(hoverAnimation, 0.5s);
+          }
+        }
+      }
+    }
+  }
+
+  .iconMenu:hover .submenuNavBar {
+    display: block;
+  }
+
+}
+//endregion
+
+// Menú lateral
+//region
+.menuLateral {
+  width: 100px;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+
+    li {
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      border-radius: 20px;
+
+      &:hover, .category {
+        @include mixinTools.SetBackgroundAndTextColor($color_texto_hover,$color_fondo_hover2);
+      }
+
+      .category {
+        display: none;
+      }
+
+      &:hover .category {
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        border-radius: 15px;
+
+        img:hover, &:hover {
+          @include mixinTools.SetBackgroundAndTextColor($color_texto_hover,$color_fondo_hover2);
+        }
+
+        img {
+          max-height: 30px;
+        }
+      }
+    }
+  }
+
+  :hover {
+    @include mixinTools.SetBackgroundAndTextColor($color_texto_hover,$color_fondo_hover);
+  }
+
+  .submenuLateral {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 100px;
+    @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo_hover);
+    z-index: 1;
+    border-radius: 15px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          @include mixinTools.SetAnimation(hoverAnimation, 0.5s);
+        }
+
+        a {
+          color: $color_texto;
+          text-decoration: none;
+          display: block;
+          padding: 10px;
+          border-radius: 15px;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .subMenuTrigger:hover .submenuLateral {
+    display: block;
+  }
+}
+//endregion
+
+// Footer
+//region
+.footerContainer {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  background-color: $color_fondo_hover;
+  padding: 0 15px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 30px;
+
+  a {
+    color: $color_texto;
+    text-decoration: none;
+    margin: 0 10px;
+
+    &:hover:not(.rrss) {
+      text-decoration: underline;
+    }
+
+    &:hover::after {
+      content: "➜";
+    }
+  }
+
+  .rrss {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 30px;
+    }
+
+    a::after {
+      content: "";
+    }
+  }
+}
+
+//endregion

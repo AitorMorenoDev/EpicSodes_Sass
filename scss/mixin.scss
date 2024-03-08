@@ -1,0 +1,30 @@
+@mixin SetBackgroundAndTextColor($color_texto,$color_fondo){
+  color: $color_texto;
+  background-color: $color_fondo;
+}
+
+@mixin SetBoxSizingProperty($param){
+  box-sizing: $param;
+  -moz-box-sizing: $param;
+  -webkit-box-sizing: $param;
+}
+
+@mixin SetTransition($property,$duration,$timing:linear){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+@mixin SetAnimation($property,$duration,$timing:linear){
+  -webkit-animation: $property $duration $timing;
+  -moz-animation: $property $duration $timing;
+  animation: $property $duration $timing;
+}
+
+@mixin SetFont($font,$size,$weight,$style, $decoration){
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  text-decoration: $decoration;
+}
