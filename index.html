@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="scss/screen.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EpicSodes | Página principal</title>
     <link rel="icon" href="img/logo.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -102,10 +105,10 @@
         <a href="secciones/lateral/novedades.html"><h1>NOVEDADES</h1></a>
         <!-- Carrusel de imágenes para las novedades -->
         <section class="slider-container">
-          <img class="slider-item" id="slide1" loading="eager" src="img/peliculas/Oppenheimer.jpeg" alt="Oppenheimer">
-          <img class="slider-item" id="slide2" src="img/peliculas/Sociedad.jpeg" alt="Sociedad">
-          <img class="slider-item" id="slide3" src="img/peliculas/PobresCriaturas.jpg" alt="Pobres criaturas">
-          <img class="slider-item" id="slide4" src="img/peliculas/asesinosLuna.jpg.webp" alt="Los asesinos de la luna">
+          <img class="slider-item" id="slide1" loading="eager" src="img/novedades/Oppenheimer.jpeg" alt="Oppenheimer">
+          <img class="slider-item" id="slide2" src="img/novedades/Sociedad.jpeg" alt="Sociedad">
+          <img class="slider-item" id="slide3" src="img/novedades/PobresCriaturas.jpg" alt="Pobres criaturas">
+          <img class="slider-item" id="slide4" src="img/novedades/asesinosLuna.jpg.webp" alt="Los asesinos de la luna">
         </section>
 
         <ul class="menu">
@@ -114,6 +117,21 @@
           <li><a href="#slide3"></a></li>
           <li><a href="#slide4"></a></li>
         </ul>
+
+        <script>
+          window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('slide1').classList.add('slider-target');
+          });
+
+          document.querySelectorAll('.menu a').forEach(item => {
+            item.addEventListener('click', event => {
+              document.querySelectorAll('.slider-item').forEach(slide => {
+                slide.classList.remove('slider-target');
+              });
+              document.getElementById(event.target.getAttribute('href').substring(1)).classList.add('slider-target');
+            });
+          });
+        </script>
 
       </main>
 

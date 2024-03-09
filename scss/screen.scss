@@ -10,13 +10,36 @@
   to {
     background-color: $color_fondo_hover2;
   }
+}
 
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.25);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
 }
 
 body {
   margin: 0;
   padding: 0;
-  @include mixinTools.SetFont("Comic Sans MS", 16px, 400, normal, none);
+  @include mixinTools.SetFont("Madimi One", 16px, 400, normal, none);
   @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo);
 }
 
@@ -26,15 +49,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 1em 2em;
 
   .logo {
     display: flex;
     align-items: center;
-    @include mixinTools.SetFont("Comic Sans MS", 30px, 400, italic, underline);
+    @include mixinTools.SetFont("Madimi One", 2em, 400, italic, underline);
 
     img {
-      max-height: 80px;
+      max-height: 3em;
+
+      &:hover {
+        @include mixinTools.SetAnimation(rotate, 1.5s);
+      }
     }
   }
 
@@ -249,12 +276,16 @@ footer {
   }
 
   .rrss {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
+    vertical-align: center;
 
     img {
       max-height: 30px;
+      &:hover {
+        @include mixinTools.SetAnimation(scale, 1s, ease-in-out);
+      }
     }
 
     a::after {

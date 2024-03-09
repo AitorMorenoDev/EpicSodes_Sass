@@ -14,19 +14,20 @@ a[href*="novedades"] {
   color: $color_texto;
 
     &:hover {
-        @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
+      @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
+      @include mixinTools.SetTransition(all, 1s, ease-in-out);
     }
 }
 
 main {
-  padding: 20px;
   text-align: center;
-  margin: 0 120px 0 120px;
+  margin: 0 2em 0 2em;
 }
 
 main img {
-  border-radius: 20px;
+  border-radius: 40px;
   margin: 0 30px;
+  cursor: crosshair;
 }
 
 
@@ -34,14 +35,14 @@ main img {
 
 .slider-container {
   display: flex;
-  width: 70%;
+  width: 65%;
   height: 100%;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-snap-type: x mandatory;
   align-items: center;
   margin: auto;
 
-  img {
+  .slider-item {
     flex: 0 0 100%;
     scroll-snap-align: center;
     width: 100%;
@@ -50,23 +51,25 @@ main img {
     @include mixinTools.SetTransition(opacity, 1.2s, ease-out);
   }
 
-  :first-child {
+  .slider-target {
     opacity: 1;
   }
 
-  :target {
-    opacity: 1;
-  }
 }
 
 // Slider navigation
 .menu{
   text-align: center;
   margin: 20px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 
   li {
     display: inline-block;
     text-align: center;
+    margin: 0 5px;
 
     a {
       display: inline-block;
@@ -74,7 +77,6 @@ main img {
       height: 20px;
       background-color: $color_fondo_hover2;
       border-radius: 50%;
-      margin: 0 5px;
       cursor: pointer;
     }
   }

@@ -21,6 +21,14 @@
   animation: $property $duration $timing;
 }
 
+@mixin SetTransform($property,$value){
+  -webkit-transform: $property $value;
+  -moz-transform: $property $value;
+  -ms-transform: $property $value;
+  -o-transform: $property $value;
+  transform: $property $value;
+}
+
 @mixin SetFont($font,$size,$weight,$style, $decoration){
   font-family: $font;
   font-size: $size;
