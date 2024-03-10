@@ -60,7 +60,7 @@ body {
       max-height: 3em;
 
       &:hover {
-        @include mixinTools.SetAnimation(rotate, 1.5s);
+        @include mixinTools.SetAnimation(rotate, 1s);
       }
     }
   }

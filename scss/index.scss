@@ -12,6 +12,7 @@
 a[href*="novedades"] {
   text-decoration: underline;
   color: $color_texto;
+  font-size: 1.2em;
 
     &:hover {
       @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
@@ -22,14 +23,13 @@ a[href*="novedades"] {
 main {
   text-align: center;
   margin: 0 2em 0 2em;
-}
 
-main img {
-  border-radius: 40px;
-  margin: 0 30px;
-  cursor: crosshair;
+  img {
+    border-radius: 40px;
+    margin: 0 30px;
+    cursor: crosshair;
+  }
 }
-
 
 // Slider
 
