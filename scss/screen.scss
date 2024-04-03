@@ -1,6 +1,7 @@
 @use "mixin.scss" as mixinTools;
 @use "globals.scss" as *;
 @import url(index.scss);
+@import url(contacto.scss);
 
 @keyframes hoverAnimation {
   from {
@@ -41,6 +42,15 @@ body {
   padding: 0;
   @include mixinTools.SetFont("Madimi One", 16px, 400, normal, none);
   @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo);
+}
+
+main {
+  margin: 0 150px;
+  text-align: justify;
+
+  h4 {
+    text-decoration: underline;
+  }
 }
 
 // Header
@@ -265,10 +275,6 @@ footer {
     color: $color_texto;
     text-decoration: none;
     margin: 0 10px;
-
-    &:hover:not(.rrss) {
-      text-decoration: underline;
-    }
 
     &:hover::after {
       content: "➜";

@@ -10,9 +10,10 @@
 }
 
 a[href*="novedades"] {
-  text-decoration: underline;
   color: $color_texto;
-  font-size: 1.2em;
+  text-decoration: none;
+  font-size: 0.8em;
+  text-align: center;
 
     &:hover {
       @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
@@ -20,8 +21,7 @@ a[href*="novedades"] {
     }
 }
 
-main {
-  text-align: center;
+#mainIndex {
   margin: 0 2em 0 2em;
 
   img {
