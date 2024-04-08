@@ -1,0 +1,50 @@
+@use "globals.scss" as *;
+@use "mixin.scss" as mixinTools;
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.equipoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#equipo > h2 {
+  text-align: center;
+}
+
+.miembro h4, .miembro h5 {
+  margin: 0.6em;
+  text-align: center;
+}
+
+.miembro {
+  max-width: 250px;
+  text-align: justify;
+  margin: 0 0.5em;
+}
+
+.miembro img {
+  max-width: 100%;
+  border-radius: 10%;
+  border: 1px solid black;
+  transform: scale(1);
+
+    &:hover {
+      animation: scale 0.4s forwards;
+    }
+}
+
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

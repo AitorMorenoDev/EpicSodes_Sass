@@ -2,7 +2,9 @@
 @use "globals.scss" as *;
 @import url(index.scss);
 @import url(contacto.scss);
+@import url(contenido.scss);
 
+// Animaciones
 @keyframes hoverAnimation {
   from {
     background-color: $color_fondo_hover;
@@ -29,11 +31,8 @@
   0% {
     -webkit-transform: rotate(0deg);
   }
-  50% {
-    -webkit-transform: rotate(360deg);
-  }
   100% {
-    -webkit-transform: rotate(0deg);
+    -webkit-transform: rotate(360deg);
   }
 }
 
@@ -44,6 +43,7 @@ body {
   @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo);
 }
 
+// Main común a todas las páginas
 main {
   margin: 0 150px;
   text-align: justify;
@@ -70,7 +70,7 @@ main {
       max-height: 3em;
 
       &:hover {
-        @include mixinTools.SetAnimation(rotate, 1s);
+        @include mixinTools.SetAnimation(rotate, 0.5s);
       }
     }
   }
@@ -163,7 +163,9 @@ main {
   width: 100px;
   padding: 20px;
   position: absolute;
+  top: 300px;
   left: 0;
+  z-index: 999;
 
   ul {
     list-style: none;

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../../scss/screen.scss">
+    <link rel="stylesheet" href="../../../scss/contenido.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EpicSodes | Página principal</title>
     <link rel="icon" href="../../../img/logo.png"/>
@@ -44,6 +45,7 @@
                 <li><a href="../../navbar/perfil.html">Perfil</a></li>
                 <li><a href="../../navbar/compras.html">Compras realizadas</a></li>
                 <li><a href="../../navbar/preferencias.html">Preferencias</a></li>
+                <li><a href="../../navbar/registro.html">Registro</a></li>
                 <li><a href="../../../index.html">Cerrar sesión</a></li>
             </ul>
         </section>
@@ -100,11 +102,63 @@
     </aside>
 
     <!-- Contenido de la página -->
-    <main>
-
-        <img src="../../../img/obra.jpg" alt="Contenido en construcción">
-        <h2><u>Contenido en construcción. </u></h2>
-
+    <main class="mainContent">
+        <figure class="productCard">
+            <img src="../../../img/peliculas/accion/cara.jpg" alt="Cara a cara">
+            <figcaption>
+                <h2>Cara a cara</h2>
+                <p>Un peligroso terrorista a punto de morir y un agente especial del FBI ingresan en un quirófano para un trasplante de cara.
+                    Se trata de que el policía pueda infiltrarse en la banda para encontrar un arma biológica que el terrorista ha colocado en algún lugar de Los Ángeles.
+                    Pero el terrorista sale del coma y se escapa.</p>
+                <p>Precio: 7.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../../img/peliculas/accion/crank.jpg" alt="Crank">
+            <figcaption>
+                <h2>Crank: Veneno en la sangre</h2>
+                <p>Chev Chelios, un asesino a sueldo de Los Ángeles, ha sido envenenado mientras dormía y solo le queda una hora de vida.
+                    La única oportunidad que tiene Chev de sobrevivir es mantenerse en movimiento para impedir que el veneno le llegue al corazón.
+                    El tiempo pasa y corre enloquecido por las calles de Los Ángeles para salvar a su novia y encontrar un antídoto que le salve la vida.</p>
+                <p>Precio: 9.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../../img/peliculas/accion/mision.jpg" alt="Misión imposible">
+            <figcaption>
+                <h2>Misión imposible</h2>
+                <p>Ethan Hunt es un super espía capaz de llevar a cabo la misión más peligrosa con la máxima eficacia y elegancia.
+                    Forma parte de un competente equipo dirigido por el agente Jim Phelps, que ha vuelto a reunir a sus hombres para participar en una
+                    dificilísima misión: evitar la venta de un disco robado que contiene información secreta de vital importancia.</p>
+                <p>Precio: 4.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../../img/peliculas/accion/jungla.jpg" alt="Jungla de Cristal">
+            <figcaption>
+                <h2>Jungla de cristal</h2>
+                <p>En lo alto de la ciudad de Los Ángeles, un grupo terrorista se ha apoderado de un edificio tomando a un grupo de personas como rehenes.
+                    Solo un hombre, el policía de Nueva York John McClane, ha conseguido escapar del acoso terrorista. Aunque está solo y fuera de servicio,
+                    McClane se enfrentará a los secuestradores. Él es la única esperanza para los rehenes. </p>
+                <p>Precio: 9.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
     </main>
 
 </div>

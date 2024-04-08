@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../scss/screen.scss">
+    <link rel="stylesheet" href="../../scss/contenido.scss">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EpicSodes | Página principal</title>
     <link rel="icon" href="../../img/logo.png"/>
@@ -44,6 +46,7 @@
                 <li><a href="../navbar/perfil.html">Perfil</a></li>
                 <li><a href="../navbar/compras.html">Compras realizadas</a></li>
                 <li><a href="../navbar/preferencias.html">Preferencias</a></li>
+                <li><a href="../navbar/registro.html">Registro</a></li>
                 <li><a href="../../index.html">Cerrar sesión</a></li>
             </ul>
         </section>
@@ -100,11 +103,234 @@
     </aside>
 
     <!-- Contenido de la página -->
-    <main>
-
-        <img src="../../img/obra.jpg" alt="Contenido en construcción">
-        <h2><u>Contenido en construcción. </u></h2>
-
+    <main class="mainContent">
+        <figure class="productCard">
+            <img src="../../img/peliculas/accion/cara.jpg" alt="Cara a cara">
+            <figcaption>
+                <h2>Cara a cara</h2>
+                <p>Un peligroso terrorista a punto de morir y un agente especial del FBI ingresan en un quirófano para un trasplante de cara.
+                    Se trata de que el policía pueda infiltrarse en la banda para encontrar un arma biológica que el terrorista ha colocado en algún lugar de Los Ángeles.
+                    Pero el terrorista sale del coma y se escapa.</p>
+                <p>Precio: 7.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/cienciaficcion/guerra.jpg" alt="La guerra de las galaxias">
+            <figcaption>
+                <h2>La guerra de las galaxias</h2>
+                <p>La princesa Leia, líder del movimiento rebelde que desea reinstaurar la República en la galaxia en los tiempos ominosos del Imperio,
+                    es capturada por las Fuerzas Imperiales, capitaneadas por el implacable Darth Vader, el sirviente más fiel del Emperador.
+                    El intrépido y joven Luke Skywalker, ayudado por Han Solo, capitán de la nave espacial "El Halcón Milenario", y los androides, R2D2 y C3PO,
+                    serán los encargados de luchar contra el enemigo e intentar rescatar a la princesa para volver a instaurar la justicia en el seno de la galaxia.</p>
+                <p>Precio: 4.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/thriller/bajocero.jpg" alt="Bajo cero">
+            <figcaption>
+                <h2>Bajo cero</h2>
+                <p>En una fría noche cerrada de invierno, en mitad de una carretera despoblada, un furgón policial blindado es asaltado durante un traslado de presos.
+                    Alguien busca a alguien de su interior. Martín, el policía conductor del furgón, consigue atrincherarse dentro del cubículo blindado con los reclusos.
+                    Obligado a entenderse con sus enemigos naturales, Martín tratará de sobrevivir y cumplir con su deber en una larga noche de pesadilla
+                    en el que se pondrán a prueba incluso sus principios. </p>
+                <p>Precio: 6.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/cienciaficcion/llegada.jpg" alt="La llegada">
+            <figcaption>
+                <h2>La llegada</h2>
+                <p>Cuando naves extraterrestres comienzan a llegar a la Tierra, los altos mandos militares piden ayuda a una experta lingüista para intentar averiguar si los
+                    alienígenas vienen en son de paz o suponen una amenaza. Poco a poco la mujer intentará aprender a comunicarse con los extraños invasores, poseedores de un lenguaje propio,
+                    para dar con la verdadera y misteriosa razón de la visita extraterrestre</p>
+                <p>Precio: 6.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/accion/crank.jpg" alt="Crank">
+            <figcaption>
+                <h2>Crank: Veneno en la sangre</h2>
+                <p>Chev Chelios, un asesino a sueldo de Los Ángeles, ha sido envenenado mientras dormía y solo le queda una hora de vida.
+                    La única oportunidad que tiene Chev de sobrevivir es mantenerse en movimiento para impedir que el veneno le llegue al corazón.
+                    El tiempo pasa y corre enloquecido por las calles de Los Ángeles para salvar a su novia y encontrar un antídoto que le salve la vida.</p>
+                <p>Precio: 9.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/comedia/vidabrian.jpg" alt="La vida de Brian">
+            <figcaption>
+                <h2>La vida de Brian</h2>
+                <p>Brian nace en un pesebre de Belén el mismo día que Jesucristo. Un cúmulo de desgraciados y tronchantes equívocos le harán llevar una vida paralela
+                    a la del verdadero Hijo de Dios. Sus pocas luces y el ambiente de decadencia y caos absoluto en que se halla sumergida la Galilea de aquellos días,
+                    le harán vivir en manos de su madre, de una feminista revolucionaria y del mismísimo Poncio Pilatos, su propia versión del calvario.</p>
+                <p>Precio: 12.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/comedia/lebowsky.jpg" alt="El gran Lebowski">
+            <figcaption>
+                <h2>El gran Lebowski</h2>
+                <p>El Nota, un vago que vive en Los Angeles, un día es confundido por un par de matones con el millonario Jeff Lebowski,
+                    con quien solo comparte apellido. Después de que orinen en su alfombra, el Nota inicia la búsqueda de El Gran Lebowski.
+                    De su encuentro surgirá un trato: el Nota recibirá una recompensa si consigue encontrar a la mujer del magnate.</p>
+                <p>Precio: 4.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/accion/jungla.jpg" alt="Jungla de Cristal">
+            <figcaption>
+                <h2>Jungla de cristal</h2>
+                <p>En lo alto de la ciudad de Los Ángeles, un grupo terrorista se ha apoderado de un edificio tomando a un grupo de personas como rehenes.
+                    Solo un hombre, el policía de Nueva York John McClane, ha conseguido escapar del acoso terrorista. Aunque está solo y fuera de servicio,
+                    McClane se enfrentará a los secuestradores. Él es la única esperanza para los rehenes. </p>
+                <p>Precio: 9.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/comedia/aterriza.jpg" alt="Aterriza como puedas">
+            <figcaption>
+                <h2>Aterriza como puedas</h2>
+                <p>El vuelo 209 de la Trans American sale de Los Ángeles con destino a Chicago. Entre el pasaje se encuentran una serie de curiosos personajes.
+                    Entre ellos, un ex-piloto de combate que, en pleno vuelo, se verá obligado a hacerse con el mando del avión comercial,
+                    tras quedar los pilotos indispuestos por una comida en mal estado.</p>
+                <p>Precio: 7.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/accion/mision.jpg" alt="Misión imposible">
+            <figcaption>
+                <h2>Misión imposible</h2>
+                <p>Ethan Hunt es un super espía capaz de llevar a cabo la misión más peligrosa con la máxima eficacia y elegancia.
+                    Forma parte de un competente equipo dirigido por el agente Jim Phelps, que ha vuelto a reunir a sus hombres para participar en una
+                    dificilísima misión: evitar la venta de un disco robado que contiene información secreta de vital importancia.</p>
+                <p>Precio: 4.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/thriller/nosotros.jpg" alt="Nosotros">
+            <figcaption>
+                <h2>Nosotros</h2>
+                <p>Adelaide Wilson es una mujer que vuelve al hogar de su infancia en la costa junto a su marido, Gabe, y sus dos hijos, para una idílica escapada veraniega.
+                    Después de un tenso día en la playa con sus amigos, Adelaide y su familia vuelven a la casa donde están pasando las vacaciones. Cuando cae la noche,
+                    los Wilson descubren la silueta de cuatro figuras cogidas de la mano y en pie delante de la vivienda. </p>
+                <p>Precio: 3.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/cienciaficcion/regreso.jpg" alt="Regreso al futuro">
+            <figcaption>
+                <h2>Regreso al futuro</h2>
+                <p>El adolescente Marty McFly es amigo de Doc, un científico al que todos toman por loco. Cuando Doc crea una máquina para viajar en el tiempo,
+                    un error fortuito hace que Marty llegue a 1955, año en el que sus futuros padres aún no se habían conocido. Después de impedir su primer encuentro,
+                    deberá conseguir que se conozcan y se casen; de lo contrario, su existencia no sería posible. </p>
+                <p>Precio: 7.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/comedia/tontos.jpg" alt="Dos tontos muy tontos">
+            <figcaption>
+                <h2>Dos tontos muy tontos</h2>
+                <p>La vida de Lloyd y Harry, dos amigos de una estupidez supina, es un auténtico desastre. El primero trabaja como chófer de una limusina,
+                    y el segundo se dedica a transportar perros. Cuando Lloyd se enamora de una chica de buena posición, que deja olvidado un maletín en el coche,
+                    los dos amigos emprenden un viaje por todo el país para devolvérselo.</p>
+                <p>Precio: 4.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/thriller/maquinista.jpg" alt="El maquinista">
+            <figcaption>
+                <h2>El maquinista</h2>
+                <p>Trevor Reznik, un empleado de una fábrica, padece desde hace un año un grave problema de insomnio, un mal que él oculta y que le provoca terribles alucinaciones.
+                    Debido a la fatiga se ha deteriorado tanto su salud física como su salud mental. Repelidos por su aspecto físico, sus compañeros de trabajo primero le evitan,
+                    y después se volverán contra él cuando uno de ellos pierde un brazo en un accidente en el que Trevor se ve involucrado.</p>
+                <p>Precio: 6.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/cienciaficcion/origen.jpg" alt="Origen">
+            <figcaption>
+                <h2>Origen</h2>
+                <p>Dom Cobb es un experto en el arte de apropiarse, durante el sueño, de los secretos del subconsciente ajeno. La extraña habilidad de Cobb le ha convertido en un
+                    hombre muy cotizado en el mundo del espionaje, pero también lo ha condenado a ser un fugitivo y, por consiguiente, a renunciar a llevar una vida normal.
+                    Su única oportunidad para cambiar de vida será hacer exactamente lo contrario de lo que ha hecho siempre: la incepción, que consiste en implantar una idea
+                    en el subconsciente en lugar de sustraerla. </p>
+                <p>Precio: 7.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/peliculas/thriller/renglones.jpg" alt="Los renglones torcidos de Dios">
+            <figcaption>
+                <h2>Los renglones torcidos de Dios</h2>
+                <p>Alice, investigadora privada, ingresa en un hospital psiquiátrico simulando una paranoia. Su objetivo es recabar pruebas del caso en el que trabaja:
+                    la muerte de un interno en circunstancias poco claras. Sin embargo, la realidad a la que se enfrentará en su encierro superará sus expectativas y pondrá en
+                    duda su propia cordura. Un mundo desconocido y apasionante se mostrará ante sus ojos. </p>
+                <p>Precio: 5.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
     </main>
 
 </div>

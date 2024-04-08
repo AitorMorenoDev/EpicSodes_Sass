@@ -1,7 +1,9 @@
 // Variables
 $color_texto: #333;
 $color_texto_hover: #000000;
-$color_fondo: #d3d3d3;
-$color_fondo_hover: #c7c7c7;
-$color_fondo_hover2: #a6a6a6;
+$color_fondo: #FFE1D6;
+$color_fondo_hover: darken($color_fondo, 5%);
+$color_fondo_hover2: darken($color_fondo_hover, 5%);
 $color_boton_success: #4CAF50;
+$color_blanco: #ffffff;
+$color_fondo_card: #FFDBD7;

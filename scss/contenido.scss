@@ -1,0 +1,191 @@
+@use "mixin.scss" as mixinTools;
+@use "globals.scss" as *;
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scaleAndBack {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+// Tarjeta de producto (película o serie)
+//region
+.productCard {
+  @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo_card);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.newsCard {
+  @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo_card);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+
+    &:hover {
+      @include mixinTools.SetAnimation(scaleAndBack, 1s);
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 20px;
+  }
+}
+
+.productFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.newsFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.productCard figcaption, .newsCard figcaption {
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.productCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.productCard p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.productCard p:last-child {
+  margin-bottom: 20px;
+}
+
+.productCard figcaption h2 ~ p:not(:nth-of-type(2)) {
+  text-align: justify;
+}
+
+.productCard figcaption h2 ~ p:where(:nth-of-type(2)) {
+  text-align: right;
+}
+
+.newsCard figcaption h2 ~ p:where(:nth-of-type(2)) {
+  text-align: right;
+}
+
+.productCard > img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transform: scale(1);
+  border: 1px solid $color_fondo_hover2;
+
+  &:hover {
+    animation: scale 0.4s forwards;
+  }
+}
+
+.btn-comprar {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $color_boton_success;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid $color_boton_success;
+  margin-top: 10px;
+}
+
+.btn-comprar img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.btn-comprar:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s ease;
+  border-radius: 20%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.btn-comprar:hover:before {
+  width: 0;
+  height: 0;
+}
+
+.btn-favoritos {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin-top: 10px;
+}
+
+.btn-favoritos img {
+  width: 25px;
+}
+
+.btn-favoritos img:hover {
+  transform: scale(1.2);
+}
+
+.productCard p + p {
+  font-style: italic;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 60px;
+  padding: 10px;
+  justify-items: center;
+}
+
+//endregion

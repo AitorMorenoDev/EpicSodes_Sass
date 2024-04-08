@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../scss/screen.scss">
+    <link rel="stylesheet" href="../../scss/contenido.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EpicSodes | Página principal</title>
     <link rel="icon" href="../../img/logo.png"/>
@@ -44,6 +45,7 @@
                 <li><a href="../navbar/perfil.html">Perfil</a></li>
                 <li><a href="../navbar/compras.html">Compras realizadas</a></li>
                 <li><a href="../navbar/preferencias.html">Preferencias</a></li>
+                <li><a href="../navbar/registro.html">Registro</a></li>
                 <li><a href="../../index.html">Cerrar sesión</a></li>
             </ul>
         </section>
@@ -100,11 +102,222 @@
     </aside>
 
     <!-- Contenido de la página -->
-    <main>
-
-        <img src="../../img/obra.jpg" alt="Contenido en construcción">
-        <h2><u>Contenido en construcción. </u></h2>
-
+    <main class="mainContent">
+        <figure class="productCard">
+            <img src="../../img/series/amazonprime/anillos.jpg" alt="Los anillos de poder">
+            <figcaption>
+                <h2>El señor de los anillos: los anillos de poder</h2>
+                <p>En un periodo de relativa calma, los personajes se enfrentan al resurgimiento del mal en la Tierra Media. Desde las profundidades más
+                    oscuras de las Montañas Nubladas hasta los majestuosos bosques de Lindon, el impresionante reino insular de Númenor y los confines más
+                    lejanos del mapa, estos reinos y personajes esculpirán legados que perdurarán en el tiempo</p>
+                <p>Precio: 7.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/disney/mandalorian.jpg" alt="The mandalorian">
+            <figcaption>
+                <h2>The mandalorian</h2>
+                <p>Ambientada tras la caída del Imperio y antes de la aparición de la Primera Orden, la serie sigue los pasos de Mando, un cazarrecompensas perteneciente
+                    a la legendaria tribu de los mandalorianos, un pistolero solitario que trabaja en los confines de la galaxia, donde no alcanza la autoridad de la Nueva República.</p>
+                <p>Precio: 4.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/netflix/breaking.jpg" alt="Breaking bad">
+            <figcaption>
+                <h2>Breaking bad</h2>
+                <p>Tras cumplir 50 años, Walter White, un profesor de química de un instituto de Albuquerque, Nuevo México, se entera de que tiene un cáncer de pulmón incurable.
+                    Casado con Skyler y con un hijo discapacitado, la brutal noticia lo impulsa a dar un drástico cambio a su vida: decide, con la ayuda de un antiguo alumno,
+                    fabricar anfetaminas y ponerlas a la venta. Lo que pretende es liberar a su familia de problemas económicos cuando se produzca el fatal desenlace. </p>
+                <p>Precio: 6.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/netflix/casa.jpg" alt="La casa de papel">
+            <figcaption>
+                <h2>La casa de papel</h2>
+                <p>Un misterioso personaje, que se hace llamar "El Profesor", planea el mayor de los atracos jamás ideado. Para llevar a cabo el ambicioso plan,
+                    recluta a una banda formada por personas con ciertas cualidades y algo en común: no tienen nada que perder. El objetivo es atracar la Fábrica Nacional de Moneda y Timbre,
+                    con la intención de quedarse encerrados dentro con una misión muy concreta: no robar dinero, sino crearlo.</p>
+                <p>Precio: 6.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/hbo/tlou.jpg" alt="The last of us">
+            <figcaption>
+                <h2>The last of us</h2>
+                <p>Veinte años después de la destrucción de la civilización moderna a causa de un hongo -el cordyceps- que se adueña del cuerpo de los humanos, uno de los supervivientes,
+                    Joel, recibe el encargo de sacar a la joven Ellie de una opresiva zona de cuarentena. Juntos cruzan Estados Unidos ayudándose mutuamente para intentar sobrevivir.</p>
+                <p>Precio: 9.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/disney/bear.jpg" alt="The bear">
+            <figcaption>
+                <h2>The bear</h2>
+                <p>Un joven chef procedente del mundo de la alta cocina regresa a Chicago para llevar la tienda de sándwiches de su familia.</p>
+                <p>Precio: 12.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/amazonprime/cid.jpg" alt="El cid">
+            <figcaption>
+                <h2>El cid</h2>
+                <p>'El Cid' cuenta la historia del hombre detrás de la leyenda, Rodrigo Díaz de Vivar, también conocido como “Ruy”, desde que era niño hasta que se convirtió en un héroe de guerra,
+                    mientras intenta encontrar su lugar dentro de una sociedad donde las intrigas de la Corona de León intenta controlarlo.</p>
+                <p>Precio: 4.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/hbo/wire.jpg" alt="The wire">
+            <figcaption>
+                <h2>The wire</h2>
+                <p>En los barrios bajos de Baltimore, se investiga un asesinato relacionado con el mundo de las drogas. Un policía es el encargado de detener a los miembros de un importante cártel.
+                    La corrupción policial, las frágiles lealtades dentro de los cárteles y la miseria vinculada al narcotráfico son algunos de los problemas denunciados en esta serie.</p>
+                <p>Precio: 9.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/hbo/got.jpg" alt="Juego de tronos">
+            <figcaption>
+                <h2>Juego de tronos</h2>
+                <p>Tras un largo verano de varios años, el temible invierno se acerca a los Siete Reinos. Lord Eddard 'Ned' Stark, señor de Invernalia,
+                    deja sus dominios para ir a la corte de su amigo, el rey Robert Baratheon, en Desembarco del Rey, la capital de los Siete Reinos.
+                    Stark se convierte en la Mano del Rey e intenta desentrañar una maraña de intrigas que pondrá en peligro su vida y la de todos los suyos.
+                    Mientras tanto, diversas facciones conspiran con un solo objetivo: apoderarse del trono.</p>
+                <p>Precio: 7.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/netflix/dark.jpg" alt="Dark">
+            <figcaption>
+                <h2>Dark</h2>
+                <p>Tras la desaparición de un joven, cuatro familias desesperadas tratan de entender lo ocurrido a medida que van desvelando un retorcido misterio
+                    que abarca tres décadas. Saga familiar con un giro sobrenatural, "Dark" se sitúa en un pueblo alemán, donde dos misteriosas desapariciones dejan
+                    al descubierto las dobles vidas y las relaciones resquebrajadas entre estas cuatro familias.</p>
+                <p>Precio: 4.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/amazonprime/good.jpg" alt="Good Omens">
+            <figcaption>
+                <h2>Good Omens</h2>
+                <p>El mundo está al borde del apocalipsis mientras la humanidad se prepara para su juicio final. Pero Azirafel, un ángel algo quisquilloso, y Crowley,
+                    un demonio, no están entusiasmados con el fin del mundo, y no pueden encontrar al Anticristo.</p>
+                <p>Precio: 3.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/disney/marvel.jpg" alt="Mrs. Marvel">
+            <figcaption>
+                <h2>Mrs. Marvel</h2>
+                <p>Kamala Khan, una adolescente de Jersey City y una megafán de los Vengadores, se siente un poco fuera de lugar en el instituto y a veces hasta en casa.
+                    Está decidida a asistir a la VengaCon, incluso sin el permiso de sus padres, pero lo que empieza como un concurso de cosplay acaba dando un giro inesperado:
+                    ¿se está convirtiendo Kamala en uno de los superhéroes que ella siempre ha admirado?</p>
+                <p>Precio: 7.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/hbo/soprano.jpg" alt="Los Soprano">
+            <figcaption>
+                <h2>Los Soprano</h2>
+                <p>Crónica de la vida cotidiana y de las aventuras personales y profesionales de una familia mafiosa que vive en Nueva Jersey. Son gentes sencillas,
+                    pero implacables en sus ritos y tradiciones. La trama se basa en las confidencias del "capo" Tony Soprano a su psicoanalista, la doctora Melfi.</p>
+                <p>Precio: 4.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav1.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/amazonprime/lqsa.jpg" alt="La que se avecina">
+            <figcaption>
+                <h2>La que se avecina</h2>
+                <p>Serie sobre los variopintos vecinos de Mirador de Montepinar, un complejo residencial situado en la periferia de una gran ciudad.
+                    Entre ellos destacan una familia caótica, unos recién casados, una "Bridget Jones" española, el "pesado oficial" del vecindario, dos prejubilados,
+                    un antisocial, un mileurista, un galán de telenovela, dos okupas y un matrimonio con niños. </p>
+                <p>Precio: 6.95€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/disney/andor.jpg" alt="Andor">
+            <figcaption>
+                <h2>Andor</h2>
+                <p>Ambientada cinco años antes de los eventos de la película Rogue One, la serie sigue al espía Cassian Andor durante los años de formación de la Alianza Rebelde.
+                    La serie muestra la transformación de Andor, un ladrón que se convierte en revolucionario y finalmente se une a la Rebelión contra el Imperio Galáctico.</p>
+                <p>Precio: 7.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
+        <figure class="productCard">
+            <img src="../../img/series/netflix/blackmirror.jpg" alt="Black mirror">
+            <figcaption>
+                <h2>Black mirror</h2>
+                <p>Serie antológica creada por Charlie Brooker que muestra el lado oscuro de la tecnología y cómo esta afecta
+                    y puede alterar nuestra vida, a veces con consecuencias tan impredecibles como aterradoras.</p>
+                <p>Precio: 5.50€</p>
+            </figcaption>
+            <div class="productFooter">
+                <button class="btn-comprar">Comprar</button>
+                <button class="btn-favoritos"><img src="../../img/iconos/fav.png" alt="favorito"></button>
+            </div>
+        </figure>
     </main>
 
 </div>
