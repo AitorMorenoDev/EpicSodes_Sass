@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../scss/screen.scss">
+    <link rel="stylesheet" href="../../scss/preferencias.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EpicSodes | Página principal</title>
     <link rel="icon" href="../../img/logo.png"/>
@@ -38,11 +39,10 @@
 
     <!-- Icono perfil -->
     <div class="iconMenu">
-        <img src="../../img/iconos/profile.png" alt="Perfil">
+        <a href="../navbar/perfil.html"><img src="../../img/iconos/profile.png" alt="Perfil"></a>
         <section class="submenuNavBar">
             <ul>
                 <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="compras.html">Compras realizadas</a></li>
                 <li><a href="preferencias.html">Preferencias</a></li>
                 <li><a href="registro.html">Registro</a></li>
                 <li><a href="../../index.html">Cerrar sesión</a></li>
@@ -101,11 +101,67 @@
     </aside>
 
     <!-- Contenido de la página -->
-    <main>
+    <main class="mainPreferencias">
+        <form action="#" class="formPreferencias">
+            <h2>Preferencias del Usuario</h2>
+            <div class="preferencia">
+                <h4>Género favorito de películas:</h4>
+                <label><input type="checkbox" name="genero_peliculas" value="accion"> Acción</label>
+                <label><input type="checkbox" name="genero_peliculas" value="ciencia_ficcion"> Ciencia Ficción</label>
+                <label><input type="checkbox" name="genero_peliculas" value="comedia"> Comedia</label>
+                <label><input type="checkbox" name="genero_peliculas" value="thriller"> Thriller</label>
+            </div>
 
-        <img src="../../img/obra.jpg" alt="Contenido en construcción">
-        <h2><u>Contenido en construcción. </u></h2>
+            <div class="preferencia">
+                <h4>Plataformas de streaming favoritas:</h4>
+                <label><input type="checkbox" name="streaming" value="netflix"> Netflix</label>
+                <label><input type="checkbox" name="streaming" value="hbo"> HBO</label>
+                <label><input type="checkbox" name="streaming" value="amazon_prime"> Amazon Prime</label>
+                <label><input type="checkbox" name="streaming" value="disney_plus"> Disney+</label>
+            </div>
 
+            <div class="preferencia">
+                <h4>Número de productos por página:</h4>
+                <select name="productos_por_pagina">
+                    <option value="" selected disabled>Seleccione una cantidad</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="ilimitado">Ilimitado</option>
+                </select>
+            </div>
+
+            <!-- Selección de idioma -->
+            <div class="preferencia">
+                <h4>Idioma preferido:</h4>
+                <select name="idioma">
+                    <option value="" selected disabled>Seleccione un idioma</option>
+                    <option value="es">Español</option>
+                    <option value="en">Inglés</option>
+                    <option value="fr">Francés</option>
+                    <option value="de">Alemán</option>
+                </select>
+            </div>
+
+            <div class="preferencia">
+                <h4>¿Desea recibir comunicaciones por email?:</h4>
+                <div class="radio-group">
+                    <label><input type="radio" name="recibir_correo" value="si"> Sí</label>
+                    <label><input type="radio" name="recibir_correo" value="no" checked> No</label>
+                </div>
+            </div>
+
+            <div class="preferencia">
+                <h4>¿Desea recibir notificaciones de la página?:</h4>
+                <div class="radio-group">
+                    <label><input type="radio" name="recibir_notificaciones" value="si"> Sí</label>
+                    <label><input type="radio" name="recibir_notificaciones" value="no" checked> No</label>
+                </div>
+            </div>
+
+            <!-- Botón de enviar -->
+            <button type="submit" class="btn-preferencias">Guardar Preferencias</button>
+        </form>
     </main>
 
 </div>
