@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../scss/screen.scss">
+    <link rel="stylesheet" href="../../scss/contacto.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EpicSodes | Página principal</title>
     <link rel="icon" href="../../img/logo.png"/>
@@ -101,36 +102,32 @@
 
     <!-- Contenido de la página -->
     <main id="mainContact">
-        <div id="containerForm">
-            <form>
-                <p>Puedes contactar con nosotros a través del siguiente formulario:</p><br>
+        <form id="containerForm">
+            <p>Puedes contactar con nosotros a través del siguiente formulario:</p><br>
 
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="10" cols="50" required></textarea><br><br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="10" cols="50" required></textarea><br><br>
 
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
+            <input type="submit" value="Enviar">
+        </form>
 
-        <div id="containerLocation">
-            <section>
-                <p>También puedes encontrarnos en la siguiente dirección: </p>
-                <cite>Calle Inventada, nº 47, Polígono Falso, Madrid.</cite>
+        <section id="containerLocation">
+            <p>También puedes encontrarnos en la siguiente dirección: </p>
+            <cite>Calle Inventada, nº 47, Polígono Falso, Madrid.</cite>
 
-                <div class="mapouter">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1510.4484478494292!2d-3.6771787250297354!3d40.319748177572464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1712147354429!5m2!1ses!2ses"
-                        width="600" height="465" allowfullscreen="" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </section>
-        </div>
+            <div class="mapouter">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1510.4484478494292!2d-3.6771787250297354!3d40.319748177572464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1712147354429!5m2!1ses!2ses"
+                    width="600" height="465" allowfullscreen="" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
 
         <article>
             <blockquote>Si lo prefieres, también puedes llamar a nuestro número de teléfono 911 222 333, en horario de L-V de 8:00 a 19:00.<br>

@@ -1,11 +1,10 @@
 @use "mixin.scss" as mixinTools;
 @use "globals.scss" as *;
 
-#mainRegister {
+.mainRegister {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .registerForm {
@@ -13,10 +12,11 @@
   background-color: $color_fondo;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
 }
 
 .registerForm h2 {
-  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -59,7 +59,7 @@ select {
   border-radius: 6px;
   cursor: pointer;
   transition: ease-out 0.6s;
-  translate: 80%;
+  margin-top: 1.5em;
 }
 
 .btn-register:hover {

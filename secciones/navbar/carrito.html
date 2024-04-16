@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../scss/screen.scss">
+    <link rel="stylesheet" href="../../scss/carrito.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EpicSodes | Página principal</title>
     <link rel="icon" href="../../img/logo.png"/>
@@ -100,11 +101,96 @@
     </aside>
 
     <!-- Contenido de la página -->
-    <main>
+    <main id="mainCarrito">
+        <section id="productosCarrito">
+            <h2> Carrito: </h2>
+            <article class="producto">
+                <img src="../../img/peliculas/cienciaficcion/guerra.jpg" alt="La guerra de las galaxias">
+                <div class="descripcion">
+                    <p>La guerra de las galaxias</p>
+                    <p>4.95€</p>
+                </div>
+            </article>
+            <article class="producto">
+                <img src="../../img/series/amazonprime/anillos.jpg" alt="Los anillos de poder">
+                <div class="descripcion">
+                    <p>Los anillos de poder</p>
+                    <p>7.95€</p>
+                </div>
+            </article>
+            <article class="producto">
+                <img src="../../img/peliculas/accion/crank.jpg" alt="Crank: Veneno en la sangre">
+                <div class="descripcion">
+                    <p>Crank: Veneno en la sangre</p>
+                    <p>9.95€</p>
+                </div>
+            </article>
+            <article class="producto">
+                <img src="../../img/peliculas/comedia/vidabrian.jpg" alt="La vida de Brian">
+                <div class="descripcion">
+                    <p>La vida de Brian</p>
+                    <p>12.50€</p>
+                </div>
+            </article>
+            <article class="producto">
+                <img src="../../img/peliculas/thriller/renglones.jpg" alt="Los renglones torcidos de dios">
+                <div class="descripcion">
+                    <p>Los renglones torcidos de dios</p>
+                    <p>5.50€</p>
+                </div>
+            </article>
+        </section>
 
-        <img src="../../img/obra.jpg" alt="Contenido en construcción">
-        <h2><u>Contenido en construcción. </u></h2>
 
+        <hr>
+        <form id="formularioPago">
+            <h2> Formulario de pago: </h2>
+
+            <label for="titular">Titular de la tarjeta:</label>
+            <input type="text" id="titular" name="titular" required><br><br>
+
+            <label for="numero">Número de la tarjeta:</label>
+            <input type="text" id="numero" name="numero" required><br><br>
+
+            <p>Fecha de caducidad</p>
+
+            <div class="fechaCad">
+                <select id="mes">
+                    <option value="" selected disabled>Mes</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                &nbsp;&nbsp;/&nbsp;&nbsp;
+                <select id="anyo">
+                    <option value="" selected disabled>Año</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required><br><br>
+
+            <p id="precio">Total: 40.85€</p>
+            <button type="submit" class="btn-comprar">
+                Pagar <img src="../../img/iconos/cart.png" alt="Carrito">
+            </button>
+        </form>
     </main>
 
 </div>
