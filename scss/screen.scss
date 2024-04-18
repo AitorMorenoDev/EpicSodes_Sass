@@ -2,6 +2,7 @@
 @use "globals.scss" as *;
 
 // Animaciones
+//region
 @keyframes hoverAnimation {
   from {
     background-color: $color_fondo_hover;
@@ -32,6 +33,7 @@
     -webkit-transform: rotate(360deg);
   }
 }
+//endregion
 
 body {
   margin: 0;
@@ -159,8 +161,8 @@ main {
 .menuLateral {
   width: 100px;
   padding: 20px;
-  position: absolute;
-  top: 300px;
+  position: fixed;
+  top: 200px;
   left: 0;
   z-index: 999;
 

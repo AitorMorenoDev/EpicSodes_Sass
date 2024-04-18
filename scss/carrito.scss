@@ -1,18 +1,34 @@
 @use "mixin.scss" as mixinTools;
 @use "globals.scss" as *;
 
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
 #mainCarrito {
   display: flex;
-  flex-wrap: wrap;
   width: 80%;
   justify-content: center;
 }
 
 #productosCarrito {
-  margin-right: 30px;
-  width: 200px;
+  margin-right: 10px;
 
-  .producto {
+  article {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -22,6 +38,10 @@
       border-radius: 10px;
       margin-right: 20px;
       border: 1px solid black;
+
+      &:hover {
+        animation: scale 0.4s forwards;
+      }
     }
 
     .descripcion {
@@ -40,15 +60,21 @@
   }
 }
 
-#productosCarrito,
-#formularioPago {
-  flex: 1;
+#productosCarrito, #formularioPago {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 0 10%;
-  height: 100%;
+  margin: 0 2%;
+  width: 100%;
+  box-shadow: 0.5em 0.5em 0.3em rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid $color_fondo_hover2;
+
+  &:hover {
+    animation: scale2 0.4s forwards;
+  }
 }
 
 .fechaCad {
@@ -58,9 +84,7 @@
   margin-bottom: 5%;
 }
 
-input[type="text"],
-input[type="number"],
-select {
+input[type="text"], input[type="number"], select {
   width: 100%;
   max-width: 300px;
   padding: 8px;
@@ -100,8 +124,9 @@ select {
 
   img {
     width: 20px;
-    margin: 0 10px;
     color: white;
+    margin-left: 10px;
+    vertical-align: middle;
   }
 }
 

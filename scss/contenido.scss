@@ -1,12 +1,23 @@
 @use "mixin.scss" as mixinTools;
 @use "globals.scss" as *;
 
+// Animaciones
+//region
 @keyframes scale {
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(1.1);
+  }
+}
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
   }
 }
 
@@ -21,6 +32,8 @@
     -webkit-transform: scale(1);
   }
 }
+//endregion
+
 // Tarjeta de producto (película o serie)
 //region
 .productCard {
@@ -32,7 +45,61 @@
   margin-bottom: 20px;
   position: relative;
   width: 100%;
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  figcaption {
+    text-align: center;
+    padding-bottom: 5%;
+
+    h2 ~ p {
+      &:not(:nth-of-type(2)) {
+        text-align: justify;
+      }
+
+      &:where(:nth-of-type(2)) {
+        text-align: right;
+      }
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+    & + p {
+      font-style: italic;
+    }
+  }
+
+  & > img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transform: scale(1);
+    border: 1px solid $color_fondo_hover2;
+
+    &:hover {
+      animation: scale 0.4s forwards;
+    }
+
+  }
+
+  &:hover {
+    animation: scale2 0.8s forwards;
+  }
 }
+//endregion
+
+// Tarjeta de novedades
+//region
 
 .newsCard {
   @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo_card);
@@ -60,62 +127,14 @@
     border: none;
     border-radius: 20px;
   }
-}
 
-.productFooter {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
+  figcaption {
+    text-align: center;
+    padding-bottom: 5%;
 
-.newsFooter {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.productCard figcaption, .newsCard figcaption {
-  text-align: center;
-  padding-bottom: 5%;
-}
-
-.productCard h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.productCard p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-.productCard p:last-child {
-  margin-bottom: 20px;
-}
-
-.productCard figcaption h2 ~ p:not(:nth-of-type(2)) {
-  text-align: justify;
-}
-
-.productCard figcaption h2 ~ p:where(:nth-of-type(2)) {
-  text-align: right;
-}
-
-.newsCard figcaption h2 ~ p:where(:nth-of-type(2)) {
-  text-align: right;
-}
-
-.productCard > img {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  transform: scale(1);
-  border: 1px solid $color_fondo_hover2;
-
-  &:hover {
-    animation: scale 0.4s forwards;
+    & h2 ~ p:where(:nth-of-type(2)) {
+        text-align: right;
+    }
   }
 }
 
@@ -132,30 +151,30 @@
   overflow: hidden;
   border: 1px solid $color_boton_success;
   margin-top: 10px;
-}
 
-.btn-comprar img {
-  width: 20px;
-  margin-right: 10px;
-}
+  img {
+    width: 20px;
+    margin-right: 10px;
+  }
 
-.btn-comprar:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: all 0.5s ease;
-  border-radius: 20%;
-  z-index: 0;
-  transform: translate(-50%, -50%);
-}
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.5s ease;
+    border-radius: 20%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+  }
 
-.btn-comprar:hover:before {
-  width: 0;
-  height: 0;
+    &:hover:before {
+        width: 0;
+        height: 0;
+    }
 }
 
 .btn-favoritos {
@@ -166,18 +185,24 @@
   bottom: 10px;
   right: 10px;
   margin-top: 10px;
-}
 
-.btn-favoritos img {
-  width: 25px;
-}
+  img {
+    width: 25px;
 
-.btn-favoritos img:hover {
-  transform: scale(1.2);
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
+//endregion
 
-.productCard p + p {
-  font-style: italic;
+// Contenido principal
+//region
+.productFooter, .newsFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .mainContent {
@@ -187,5 +212,5 @@
   padding: 10px;
   justify-items: center;
 }
-
 //endregion
+
