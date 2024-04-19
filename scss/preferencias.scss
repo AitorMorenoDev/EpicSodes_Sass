@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
 
-  label {
+  #{$etiqueta} {
     margin-right: 0.5em;
   }
 }
@@ -41,6 +41,10 @@ select {
   border: 1px solid #ccc;
   border-radius: 10px;
   @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
+
+  &:focus {
+    border-color: blue;
+  }
 }
 
 .btn-preferencias {

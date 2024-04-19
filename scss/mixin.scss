@@ -9,16 +9,16 @@
   -webkit-box-sizing: $param;
 }
 
-@mixin SetTransition($property,$duration,$timing:linear){
-  -webkit-transition: $property $duration $timing;
-  -moz-transition: $property $duration $timing;
-  transition: $property $duration $timing;
+@mixin SetTransition($val...){
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  transition: $val;
 }
 
-@mixin SetAnimation($property,$duration,$timing:linear){
-  -webkit-animation: $property $duration $timing;
-  -moz-animation: $property $duration $timing;
-  animation: $property $duration $timing;
+@mixin SetAnimation($val...){
+  -webkit-animation: $val;
+  -moz-animation: $val;
+  animation: $val;
 }
 
 @mixin SetTransform($property,$value){

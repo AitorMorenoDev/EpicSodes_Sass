@@ -23,7 +23,7 @@
 .form-group {
   margin-bottom: 20px;
 
-  label {
+  #{$etiqueta} {
     display: block;
     margin-bottom: 5px;
   }
@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
 
-  label {
+  #{$etiqueta} {
     margin-right: 10px;
   }
 }
@@ -45,6 +45,10 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
   border: 1px solid #ccc;
   border-radius: 10px;
   @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
+
+    &:focus {
+        border-color: blue;
+    }
 }
 
 .btn-register {

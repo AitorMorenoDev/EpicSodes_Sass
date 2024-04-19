@@ -17,7 +17,7 @@ a[href*="novedades"] {
 
     &:hover {
       @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
-      @include mixinTools.SetTransition(all, 1s, ease-in-out);
+      @include mixinTools.SetTransition(all 1s ease-in-out);
     }
 }
 
@@ -48,7 +48,7 @@ a[href*="novedades"] {
     width: 100%;
     object-fit: cover;
     opacity: 0;
-    @include mixinTools.SetTransition(opacity, 1.2s, ease-out);
+    @include mixinTools.SetTransition(opacity 1.2s ease-out);
   }
 
   .slider-target {

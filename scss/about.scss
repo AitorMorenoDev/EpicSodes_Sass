@@ -21,24 +21,31 @@
   text-align: center;
 }
 
-.miembro {
-  max-width: 250px;
-  text-align: justify;
-  margin: 0 0.5em;
+$miembros: hombre1 mujer1 hombre2 mujer2;
 
-  h4, h5 {
-    margin: 0.6em;
-    text-align: center;
-  }
+@each $miembro in $miembros {
+  .miembro-#{$miembro} {
+    max-width: 250px;
+    text-align: justify;
+    margin: 0 0.5em;
 
-  img {
-    max-width: 100%;
-    border-radius: 10%;
-    border: 1px solid black;
-    transform: scale(1);
+    h4, h5 {
+      margin: 0.6em;
+      text-align: center;
+    }
 
-    &:hover {
-      animation: scale 0.4s forwards;
+    .imagenMiembro {
+      width: 100%;
+      height: 150px;
+      border-radius: 10%;
+      border: 1px solid black;
+      transform: scale(1);
+      background: url("../../media/img/miembros/#{$miembro}.jpg") no-repeat center center;
+      background-size: cover;
+
+      &:hover {
+        animation: scale 0.4s forwards;
+      }
     }
   }
 }

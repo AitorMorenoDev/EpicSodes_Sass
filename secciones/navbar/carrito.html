@@ -6,11 +6,21 @@
     <link rel="stylesheet" href="../../scss/carrito.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EpicSodes | Página principal</title>
-    <link rel="icon" href="../../img/logo.png"/>
+    <link rel="icon" href="../../media/img/logo.png"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            let boton = document.querySelector(".btn-comprar");
+            let audio = document.querySelector("#sonidoCompra");
+
+            boton.addEventListener('click', function() {
+                audio.play();
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -18,7 +28,7 @@
 <nav class="navbar">
     <!-- Logo -->
     <div class="logo">
-        <a href="../../index.html"><img src="../../img/logo.png" alt="Logo"></a>
+        <a href="../../index.html"><img src="../../media/img/logo.png" alt="Logo"></a>
         <p>EpicSodes</p>
     </div>
 
@@ -27,19 +37,19 @@
         <form action="#">
             <label>
                 <input type="text" id="buscar" placeholder="Buscar...">
-                <input type="image" class="buscarIcon" src="../../img/iconos/search.png" alt="Buscar">
+                <input type="image" class="buscarIcon" src="../../media/img/iconos/search.png" alt="Buscar">
             </label>
         </form>
     </search>
 
     <!-- Icono home -->
     <div class="iconMenu">
-        <a href="../../index.html"><img src="../../img/iconos/home.png" alt="Home"></a>
+        <a href="../../index.html"><img src="../../media/img/iconos/home.png" alt="Home"></a>
     </div>
 
     <!-- Icono perfil -->
     <div class="iconMenu">
-        <a href="../navbar/perfil.html"><img src="../../img/iconos/profile.png" alt="Perfil"></a>
+        <a href="../navbar/perfil.html"><img src="../../media/img/iconos/profile.png" alt="Perfil"></a>
         <section class="submenuNavBar">
             <ul>
                 <li><a href="perfil.html">Perfil</a></li>
@@ -52,7 +62,7 @@
 
     <!-- Icono carrito -->
     <div class="iconMenu">
-        <a href="carrito.html"><img src="../../img/iconos/cart.png" alt="Carrito"></a>
+        <a href="carrito.html"><img src="../../media/img/iconos/cart.png" alt="Carrito"></a>
     </div>
 </nav>
 
@@ -63,12 +73,12 @@
     <aside class="menuLateral">
         <ul>
             <li>
-                <a href="../lateral/novedades.html"><img class="icon" src="../../img/iconos/news.png" alt="Novedades"></a>
+                <a href="../lateral/novedades.html"><img class="icon" src="../../media/img/iconos/news.png" alt="Novedades"></a>
                 <span class="category">Novedades</span>
             </li>
 
             <li class="subMenuTrigger">
-                <a href="../lateral/peliculas.html"><img class="icon" src="../../img/iconos/films.png" alt="Películas"></a>
+                <a href="../lateral/peliculas.html"><img class="icon" src="../../media/img/iconos/films.png" alt="Películas"></a>
                 <span class="category">Películas</span>
                 <section class="submenuLateral">
                     <ul>
@@ -81,7 +91,7 @@
             </li>
 
             <li class="subMenuTrigger">
-                <a href="../lateral/series.html"><img class="icon" src="../../img/iconos/series.png" alt="Series"></a>
+                <a href="../lateral/series.html"><img class="icon" src="../../media/img/iconos/series.png" alt="Series"></a>
                 <span class="category">Series</span>
                 <section class="submenuLateral">
                     <ul>
@@ -94,7 +104,7 @@
             </li>
 
             <li>
-                <a href="../lateral/favoritos.html"><img class="icon" src="../../img/iconos/fav.png" alt="Favoritos"></a>
+                <a href="../lateral/favoritos.html"><img class="icon" src="../../media/img/iconos/fav.png" alt="Favoritos"></a>
                 <span class="category">Favoritos</span>
             </li>
         </ul>
@@ -105,39 +115,44 @@
         <section id="productosCarrito">
             <h2> Carrito: </h2>
             <article class="producto">
-                <img src="../../img/peliculas/cienciaficcion/guerra.jpg" alt="La guerra de las galaxias">
+                <img src="../../media/img/peliculas/cienciaficcion/guerra.jpg" alt="La guerra de las galaxias">
                 <div class="descripcion">
                     <p>La guerra de las galaxias</p>
                     <p>4.95€</p>
                 </div>
+                <img src="../../media/img/iconos/borrar.svg" alt="Eliminar" class="eliminarProducto">
             </article>
             <article class="producto">
-                <img src="../../img/series/amazonprime/anillos.jpg" alt="Los anillos de poder">
+                <img src="../../media/img/series/amazonprime/anillos.jpg" alt="Los anillos de poder">
                 <div class="descripcion">
                     <p>Los anillos de poder</p>
                     <p>7.95€</p>
                 </div>
+                <img src="../../media/img/iconos/borrar.svg" alt="Eliminar" class="eliminarProducto">
             </article>
             <article class="producto">
-                <img src="../../img/peliculas/accion/crank.jpg" alt="Crank: Veneno en la sangre">
+                <img src="../../media/img/peliculas/accion/crank.jpg" alt="Crank: Veneno en la sangre">
                 <div class="descripcion">
                     <p>Crank: Veneno en la sangre</p>
                     <p>9.95€</p>
                 </div>
+                <img src="../../media/img/iconos/borrar.svg" alt="Eliminar" class="eliminarProducto">
             </article>
             <article class="producto">
-                <img src="../../img/peliculas/comedia/vidabrian.jpg" alt="La vida de Brian">
+                <img src="../../media/img/peliculas/comedia/vidabrian.jpg" alt="La vida de Brian">
                 <div class="descripcion">
                     <p>La vida de Brian</p>
                     <p>12.50€</p>
                 </div>
+                <img src="../../media/img/iconos/borrar.svg" alt="Eliminar" class="eliminarProducto">
             </article>
             <article class="producto">
-                <img src="../../img/peliculas/thriller/renglones.jpg" alt="Los renglones torcidos de dios">
+                <img src="../../media/img/peliculas/thriller/renglones.jpg" alt="Los renglones torcidos de dios">
                 <div class="descripcion">
                     <p>Los renglones torcidos de dios</p>
                     <p>5.50€</p>
                 </div>
+                <img src="../../media/img/iconos/borrar.svg" alt="Eliminar" class="eliminarProducto">
             </article>
         </section>
 
@@ -185,8 +200,9 @@
             <input type="text" id="cvv" name="cvv" required><br><br>
 
             <p id="precio">Total: 40.85€</p>
+            <audio id="sonidoCompra" src="../../media/audio/efectoCompra.mp3"></audio>
             <button type="submit" class="btn-comprar">
-                Pagar <img src="../../img/iconos/cart.svg" alt="Carrito">
+                Pagar <img src="../../media/img/iconos/cart.svg" alt="Carrito">
             </button>
         </form>
     </main>
@@ -207,9 +223,9 @@
 
         <!-- Redes sociales -->
         <section class="rrss">
-            <a href="https://www.facebook.com"><img src="../../img/rrss/facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com"><img src="../../img/rrss/instagram.png" alt="Instagram"></a>
-            <a href="https://www.youtube.com"><img src="../../img/rrss/youtube.png" alt="Youtube"></a>
+            <a href="https://www.facebook.com"><img src="../../media/img/rrss/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com"><img src="../../media/img/rrss/instagram.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com"><img src="../../media/img/rrss/youtube.png" alt="Youtube"></a>
         </section>
 
         <!-- Sobre -->

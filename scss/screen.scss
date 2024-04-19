@@ -13,7 +13,7 @@
   }
 }
 
-@keyframes scale {
+@keyframes scaleInMainScreen {
   0% {
     -webkit-transform: scale(1);
   }
@@ -69,7 +69,7 @@ main {
       max-height: 3em;
 
       &:hover {
-        @include mixinTools.SetAnimation(rotate, 0.5s);
+        @include mixinTools.SetAnimation(rotate 1s);
       }
     }
   }
@@ -142,7 +142,7 @@ main {
 
           &:hover{
             background-color: $color_fondo_hover2;
-            @include mixinTools.SetAnimation(hoverAnimation, 0.5s);
+            @include mixinTools.SetAnimation(hoverAnimation 0.7s);
           }
         }
       }
@@ -234,7 +234,7 @@ main {
         cursor: pointer;
 
         &:hover {
-          @include mixinTools.SetAnimation(hoverAnimation, 0.5s);
+          @include mixinTools.SetAnimation(hoverAnimation 0.7s ease-in);
         }
 
         a {
@@ -280,6 +280,10 @@ footer {
     &:hover::after {
       content: "➜";
     }
+
+    &:active {
+      color: $color_link_active;
+    }
   }
 
   .rrss {
@@ -291,7 +295,7 @@ footer {
     img {
       max-height: 30px;
       &:hover {
-        @include mixinTools.SetAnimation(scale, 1s, ease-in-out);
+        @include mixinTools.SetAnimation(scaleInMainScreen 1s);
       }
     }
 

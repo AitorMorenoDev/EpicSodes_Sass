@@ -32,21 +32,30 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
 
-    img {
+    img:not(.eliminarProducto) {
       width: 100px;
       border-radius: 10px;
       margin-right: 20px;
       border: 1px solid black;
+    }
 
-      &:hover {
-        animation: scale 0.4s forwards;
-      }
+    .eliminarProducto {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      display: flex;
     }
 
     .descripcion {
       display: flex;
       flex-direction: column;
+      width: 100%;
+      border-radius: 10px;
+      margin-right: 0.5em;
+      padding-left: 0.5em;
 
       h3 {
         margin: 0;
@@ -57,14 +66,23 @@
       }
 
     }
+
+    &:hover {
+      .descripcion {
+        background-color: $color_fondo_hover;
+      }
+
+        img {
+          animation: scale 0.4s forwards;
+        }
+    }
   }
 }
 
 #productosCarrito, #formularioPago {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 2%;
   width: 100%;
   box-shadow: 0.5em 0.5em 0.3em rgba(0, 0, 0, 0.1);
@@ -77,14 +95,14 @@
   }
 }
 
-.fechaCad {
+[class^="fecha"] {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 5%;
 }
 
-input[type="text"], input[type="number"], select {
+input[type="text"]:not(:is(nav *)), input[type="number"], select {
   width: 100%;
   max-width: 300px;
   padding: 8px;
@@ -93,6 +111,10 @@ input[type="text"], input[type="number"], select {
   border-radius: 10px;
   @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
   margin-bottom: 10px;
+
+  &:focus {
+    border-color: blue;
+  }
 }
 
 

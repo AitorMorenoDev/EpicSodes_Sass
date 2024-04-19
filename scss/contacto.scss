@@ -13,9 +13,9 @@
 #containerForm, #containerLocation, #mainContact article {
   padding: 20px;
   margin-right: 20px;
-  background-color: $color_fondo;
+  background-color: $color_fondo_card;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 #mainContact {
@@ -29,7 +29,7 @@
   }
 }
 
-label {
+#{$etiqueta} {
   display: block;
   margin-bottom: 5px;
 }
@@ -44,6 +44,10 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 10px;
   @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
+
+  &:focus {
+    border-color: blue;
+  }
 }
 
 input[type="submit"] {
@@ -64,5 +68,14 @@ input[type="submit"] {
 }
 
 li a {
-    color: $color_texto;
+  color: $color_texto;
+
+  &:hover {
+    color: $color_texto_hover;
+  }
+
+  &:visited {
+    $color_link_visited: #9c3e3e;
+    color: $color_link_visited;
+  }
 }

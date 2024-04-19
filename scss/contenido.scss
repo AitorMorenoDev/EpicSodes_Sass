@@ -36,9 +36,9 @@
 
 // Tarjeta de producto (película o serie)
 //region
-.productCard {
+%card-base {
   @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo_card);
-  border-radius: 10px;
+  border-radius: $size_border_radius;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 20px;
@@ -47,9 +47,15 @@
   width: 100%;
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
+}
+
+
+
+.productCard {
+  @extend %card-base;
 
   figcaption {
     text-align: center;
@@ -102,30 +108,28 @@
 //region
 
 .newsCard {
-  @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo_card);
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  margin-bottom: 20px;
-  position: relative;
-  width: 100%;
+  @extend %card-base;
+
+  &:has(video) {
+    @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, darken($color_fondo_card, 3%));
+  }
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
     text-align: center;
 
     &:hover {
-      @include mixinTools.SetAnimation(scaleAndBack, 1s);
+      @include mixinTools.SetAnimation(scaleAndBack 1s);
     }
   }
 
   iframe {
+    border-radius: 20px;
+  }
+
+  iframe, video {
     width: 100%;
     height: 500px;
     border: none;
-    border-radius: 20px;
   }
 
   figcaption {
