@@ -1,3 +1,5 @@
+@use "globals.scss" as *;
+
 @mixin SetBackgroundAndTextColor($color_texto,$color_fondo){
   color: $color_texto;
   background-color: $color_fondo;
@@ -35,4 +37,18 @@
   font-weight: $weight;
   font-style: $style;
   text-decoration: $decoration;
+}
+
+
+// Mixin para media queries
+@mixin PhoneAndTablet {
+  @media (max-width: $breakpoint-desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin DesktopOnly {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
 }

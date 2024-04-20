@@ -56,14 +56,28 @@ main {
 //region
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   padding: 1em 2em;
+
+  .navbarContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
   .logo {
     display: flex;
     align-items: center;
     @include mixinTools.SetFont("Madimi One", 2em, 400, italic, underline);
+
+    @include mixinTools.PhoneAndTablet {
+      p {
+        display: none;
+      }
+    }
 
     img {
       max-height: 3em;
@@ -74,11 +88,31 @@ main {
     }
   }
 
-  .buscador {
+  @include mixinTools.DesktopOnly {
+    #menuMovil {
+      display: none;
+    }
+  }
+
+  @include mixinTools.PhoneAndTablet {
+    .navbar {
+      #menuMovil {
+        display: block;
+        top: 0;
+        left: 0;
+        transition: height 0.3s ease;
+
+        &:hover {
+          background-color: $color_fondo_hover;
+        }
+      }
+    }
+  }
+
+  %buscador {
     flex-grow: 1;
     margin: 0 20px;
     position: relative;
-    display: inline-block;
     text-align: center;
 
     input[type="text"] {
@@ -95,6 +129,27 @@ main {
       position: relative;
       top: 8px;
       margin-left: -40px;
+    }
+  }
+
+  .buscadorEscritorio {
+    @extend %buscador;
+    @include mixinTools.DesktopOnly {
+      display: block;
+    }
+    @include mixinTools.PhoneAndTablet {
+      display: none;
+    }
+  }
+
+  .buscadorMovil {
+    @extend %buscador;
+    @include mixinTools.DesktopOnly {
+      display: none;
+    }
+    @include mixinTools.PhoneAndTablet {
+      display: block;
+      width: 100%;
     }
   }
 
@@ -129,16 +184,31 @@ main {
       margin: 0;
 
       li {
-        text-align: center;
-        position: relative;
+        align-items: center;
         cursor: pointer;
 
+        &:is(.opcionMovil) {
+          display:flex;
+
+          &:hover{
+            background-color: $color_fondo_hover2;
+            @include mixinTools.SetAnimation(hoverAnimation 0.7s);
+            border-radius: 15px;
+          }
+        }
+
+        img {
+          max-height: 20px;
+          margin-left: 1em;
+        }
+
         a {
+          display: block;
           color: $color_texto_hover;
           text-decoration: none;
-          display: block;
           padding: 20px;
           border-radius: 15px;
+          text-align: center;
 
           &:hover{
             background-color: $color_fondo_hover2;
@@ -165,6 +235,10 @@ main {
   top: 200px;
   left: 0;
   z-index: 999;
+
+  @include mixinTools.PhoneAndTablet {
+    display: none;
+  }
 
   ul {
     list-style: none;
@@ -257,20 +331,41 @@ main {
 
 // Footer
 //region
-.footerContainer {
-  padding: 20px;
-  text-align: center;
-}
+
 
 footer {
   display: flex;
+  flex-direction: column;
   background-color: $color_fondo_hover;
   padding: 0 15px;
+  margin: 0 15px;
   text-align: center;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   border-radius: 30px;
+
+  #segundaColFooter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.5em;
+
+    a {
+      align-self: center;
+    }
+  }
+
+  @include mixinTools.DesktopOnly {
+    p {
+      display: inline-block;
+    }
+  }
+
+  @include mixinTools.PhoneAndTablet {
+    #primeraColFooter {
+      margin-top: 0.5em;
+    }
+  }
 
   a {
     color: $color_texto;
