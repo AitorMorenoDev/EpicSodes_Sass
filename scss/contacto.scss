@@ -10,12 +10,40 @@
   }
 }
 
-#containerForm, #containerLocation, #mainContact article {
-  padding: 20px;
-  margin-right: 20px;
-  background-color: $color_fondo_card;
+%card-base {
+    padding: 20px;
+    margin-right: 20px;
+    background-color: $color_fondo_card;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+#containerForm, #containerLocation {
+  flex: 1;
+  @extend %card-base;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+#containerLocation {
+  display: flex;
+  flex-direction: column;
+
+  > *:not(p) {
+    justify-content: center;
+  }
+}
+
+iframe {
+  width: 100%;
+  border: none;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#mainContact article {
+  flex-basis: 100%;
+  @extend %card-base;
 }
 
 #mainContact {
