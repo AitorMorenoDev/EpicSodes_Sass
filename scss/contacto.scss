@@ -10,81 +10,49 @@
   }
 }
 
+// Card base, de la que heredan los contenedores de formulario, mapa y article
 %card-base {
     padding: 20px;
     margin-right: 20px;
     background-color: $color_fondo_card;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-
 }
 
+// Contenedores de formulario y mapa
 #containerForm, #containerLocation {
   flex: 1;
   @extend %card-base;
   margin-bottom: 2em;
   position: relative;
-}
 
-#containerLocation {
-  display: flex;
-  flex-direction: column;
-
-  > *:not(p) {
-    justify-content: center;
-  }
-}
-
-iframe {
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-}
-
-#mainContact article {
-  flex-basis: 100%;
-  @extend %card-base;
-}
-
-#mainContact {
-  section {
-    margin-right: 0;
-  }
-
-  article {
+  iframe {
     width: 100%;
-    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
   }
-}
 
-#{$etiqueta} {
-  display: block;
-  margin-bottom: 5px;
-}
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, $color_fondo_hover);
-
-  &:focus {
-    border-color: blue;
+    &:focus {
+      border-color: blue;
+    }
   }
-}
 
-input[type="submit"] {
-  @include mixinTools.SetBackgroundAndTextColor(white, $color_boton_success);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: ease-out 0.6s;
+  input[type="submit"] {
+    @include mixinTools.SetBackgroundAndTextColor(white, $color_boton_success);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: ease-out 0.6s;
 
     &:hover {
       box-shadow: inset 100px 0 0 0 darken($color_boton_success, 10%);
@@ -93,8 +61,32 @@ input[type="submit"] {
     &:not(:hover) {
       box-shadow: inset 0 0 0 0 darken($color_boton_success, 10%);
     }
+  }
 }
 
+// Contenedor de article
+#mainContact article {
+  flex-basis: 100%;
+  @extend %card-base;
+}
+
+// Estilos específicos para el contenedor del mapa
+#containerLocation {
+  display: flex;
+  flex-direction: column;
+
+  > *:not(p) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#{$etiqueta} {
+  display: block;
+  margin-bottom: 5px;
+}
+
+// Enlaces∫
 li a {
   color: $color_texto;
 

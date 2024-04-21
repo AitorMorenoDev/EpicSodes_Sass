@@ -9,6 +9,7 @@
   align-items: center;
 }
 
+// Estilos del perfil
 #datosPerfil {
   display: flex;
   align-items: center;
@@ -31,6 +32,7 @@
   }
 }
 
+// Estilos de las compras realizadas
 #comprasRealizadas {
   margin-top: 1em;
   width: 100%;
@@ -55,6 +57,7 @@
   margin: 1em 0;
   overflow: hidden;
 
+  // Efecto "shine" en las compras realizadas
   &::before {
     content: '';
     position: absolute;
@@ -81,6 +84,7 @@
   display: flex;
 }
 
+// Estilo para los productos dentro de la card de la compra realizada
 .producto {
   margin-right: 20px;
 

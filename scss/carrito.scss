@@ -1,6 +1,7 @@
 @use "mixin.scss" as mixinTools;
 @use "globals.scss" as *;
 
+//Animaciones
 @keyframes scale {
   0% {
     transform: scale(1);
@@ -19,6 +20,7 @@
   }
 }
 
+// Contenido principal
 #mainCarrito {
   display: flex;
   width: 80%;
@@ -30,6 +32,7 @@
   }
 }
 
+// Productos
 #productosCarrito {
   margin-right: 10px;
 
@@ -84,6 +87,7 @@
   }
 }
 
+// Contenedor de formulario de productos y pago
 #productosCarrito, #formularioPago {
   display: flex;
   flex-direction: column;

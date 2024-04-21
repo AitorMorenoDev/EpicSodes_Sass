@@ -36,6 +36,8 @@
 
 // Tarjeta de producto (película o serie)
 //region
+
+// Card base de la que heredan la card de producto y la de novedades
 %card-base {
   @include mixinTools.SetBackgroundAndTextColor($color_texto,$color_fondo_card);
   border-radius: $size_border_radius;
@@ -52,8 +54,7 @@
   }
 }
 
-
-
+// Tarjeta de producto
 .productCard {
   @extend %card-base;
 
@@ -109,6 +110,10 @@
 
 .newsCard {
   @extend %card-base;
+
+  @include mixinTools.PhoneAndTablet {
+    width: 80%;
+  }
 
   &:has(video) {
     @include mixinTools.SetBackgroundAndTextColor($color_texto_hover, darken($color_fondo_card, 3%));
