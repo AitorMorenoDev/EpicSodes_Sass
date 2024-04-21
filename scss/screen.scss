@@ -47,6 +47,10 @@ main {
   margin: 0 150px;
   text-align: justify;
 
+    @include mixinTools.PhoneAndTablet {
+        margin: 0;
+    }
+
   h4 {
     text-decoration: underline;
   }
@@ -331,14 +335,12 @@ main {
 
 // Footer
 //region
-
-
 footer {
   display: flex;
   flex-direction: column;
   background-color: $color_fondo_hover;
   padding: 0 15px;
-  margin: 0 15px;
+  margin: 1.2em 1em;
   text-align: center;
   justify-content: space-between;
   align-items: center;

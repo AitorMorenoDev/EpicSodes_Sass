@@ -23,6 +23,11 @@
   display: flex;
   width: 80%;
   justify-content: center;
+
+  @include mixinTools.PhoneAndTablet {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 #productosCarrito {
@@ -82,9 +87,9 @@
 #productosCarrito, #formularioPago {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 2%;
-  width: 100%;
+  width: 80%;
   box-shadow: 0.5em 0.5em 0.3em rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
@@ -92,6 +97,10 @@
 
   &:hover {
     animation: scale2 0.4s forwards;
+  }
+
+  @include mixinTools.PhoneAndTablet {
+    margin: 1em auto 2em;
   }
 }
 
