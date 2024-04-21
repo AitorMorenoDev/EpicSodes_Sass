@@ -32,7 +32,9 @@
 }
 
 #comprasRealizadas {
-  margin-top: 20px;
+  margin-top: 1em;
+  width: 100%;
+  margin-right: 2em;
 
   h3 {
     text-align: center;
@@ -43,13 +45,14 @@
 .compraRealizada {
   position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
   padding: 20px;
   background-color: $color_fondo_card;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
-  margin: 20px 0;
+  margin: 1em 0;
   overflow: hidden;
 
   &::before {
@@ -68,6 +71,10 @@
     &:hover::before {
       transform: translateX(100%);
     }
+
+  @include mixinTools.PhoneAndTablet {
+    flex-direction: column;
+  }
 }
 
 .totalProductos {
@@ -77,6 +84,11 @@
 .producto {
   margin-right: 20px;
 
+  @include mixinTools.PhoneAndTablet {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
   p {
     text-align: center;
   }
@@ -85,15 +97,28 @@
     width: 150px;
     border-radius: 5px;
     border: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+
+    @include mixinTools.PhoneAndTablet {
+      width: 100px;
+    }
   }
 }
 
 .detallesCompra {
   font-size: 0.9em;
-  margin-left: auto;
-  text-align: end;
+  text-align: center;
   border-radius: 10%;
   background-color: $color_fondo_hover;
   padding: 10px;
-    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+
+  @include mixinTools.DesktopOnly {
+    margin-left: auto;
+  }
+
+  @include mixinTools.PhoneAndTablet {
+    font-size: 0.8em;
+  }
 }

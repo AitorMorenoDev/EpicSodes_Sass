@@ -100,7 +100,7 @@
   }
 
   @include mixinTools.PhoneAndTablet {
-    margin: 1em auto 2em;
+    margin: 1em 0 2em 0;
   }
 }
 
